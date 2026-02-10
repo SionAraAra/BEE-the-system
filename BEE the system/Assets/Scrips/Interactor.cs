@@ -23,6 +23,12 @@ public class Interactor : MonoBehaviour
 
             if (InteractInput())
             {
+                if (currentInteractable.CompareTag("NextLevel"))
+                {
+                    levelLoader = currentInteractable.transform.GetComponent<LevelLoader>();
+                            
+                    levelLoader.EnterRoom();
+                }
                 Debug.Log("Interact");
             }
         }
@@ -35,11 +41,7 @@ public class Interactor : MonoBehaviour
 
     bool InteractInput()
     {
-        if (currentInteractable.CompareTag("NextLevel"))
-        {
-            levelLoader = currentInteractable.transform.GetComponent<LevelLoader>();
-            levelLoader.interact = true;
-        }
+        
 
         return Input.GetButtonDown("Interact");
     }
@@ -64,7 +66,7 @@ public class Interactor : MonoBehaviour
             if (obj.CompareTag("NextLevel"))
             {
                 levelLoader =  obj.transform.GetComponent<LevelLoader>();
-                levelLoader.interact = true;
+                
                 currentInteractable = obj.transform.gameObject;
                 currentBackLight = currentInteractable.transform.Find("BackLight")?.gameObject;
             }
