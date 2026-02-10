@@ -49,7 +49,15 @@ public class PlayerMovement : MonoBehaviour
                     
             //Changing looking direction
             float direction = Mathf.Sign(xInput);
-            transform.localScale = new Vector3(direction, transform.localScale.y, transform.localScale.z);
+            if (direction < 0)
+            {
+                transform.localScale = new Vector3(transform.localScale.x*-1, transform.localScale.y, transform.localScale.z);
+            }
+            else
+            {
+                transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            }
+            
         }
         
                 
