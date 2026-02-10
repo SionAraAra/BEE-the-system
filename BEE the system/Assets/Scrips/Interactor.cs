@@ -7,7 +7,8 @@ public class Interactor : MonoBehaviour
     public Transform detectionPoint;
     private const float detectionRadius = 0.2f;
     public LayerMask LayerMask;
-
+    private LevelLoader levelLoader;
+    
     private GameObject currentInteractable;
     private GameObject currentBackLight;
     private GameObject currentName;
@@ -34,6 +35,12 @@ public class Interactor : MonoBehaviour
 
     bool InteractInput()
     {
+        if (currentInteractable.CompareTag("NextLevel"))
+        {
+            levelLoader = currentInteractable.transform.GetComponent<LevelLoader>();
+            levelLoader.interact = true;
+        }
+
         return Input.GetButtonDown("Interact");
     }
 
@@ -42,14 +49,26 @@ public class Interactor : MonoBehaviour
         Collider2D obj = Physics2D.OverlapCircle(detectionPoint.position, detectionRadius, LayerMask);
         if (obj != null)
         {
-            if (currentInteractable != obj.gameObject)
+            if (obj.CompareTag("Interactable"))
             {
-                currentInteractable = obj.transform.parent.gameObject;
-                //Debug.Log("currentInteractable: " + currentInteractable.name);
-                currentBackLight = currentInteractable.transform.Find("BackLight")?.gameObject;
-                //Debug.Log("currentBackLight: " + currentBackLight.name);
-                currentName = currentInteractable.transform.Find("Name").gameObject;
+               if (currentInteractable != obj.gameObject)
+               {
+                   currentInteractable = obj.transform.parent.gameObject;
+                   //Debug.Log("currentInteractable: " + currentInteractable.name);
+                   currentBackLight = currentInteractable.transform.Find("BackLight")?.gameObject;
+                   //Debug.Log("currentBackLight: " + currentBackLight.name);
+                   currentName = currentInteractable.transform.Find("Name").gameObject;
+               }  
             }
+
+            if (obj.CompareTag("NextLevel"))
+            {
+                levelLoader =  obj.transform.GetComponent<LevelLoader>();
+                levelLoader.interact = true;
+                currentInteractable = obj.transform.gameObject;
+                currentBackLight = currentInteractable.transform.Find("BackLight")?.gameObject;
+            }
+           
             
             return true;
         }
