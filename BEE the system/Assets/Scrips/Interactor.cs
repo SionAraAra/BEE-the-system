@@ -12,7 +12,8 @@ public class Interactor : MonoBehaviour
     private GameObject currentInteractable;
     private GameObject currentBackLight;
     private GameObject currentName;
-
+    private GameObject currentTextBox;
+    private bool getText = false;
     
     // Update is called once per frame
     void Update()
@@ -29,11 +30,30 @@ public class Interactor : MonoBehaviour
                             
                     levelLoader.EnterRoom();
                 }
-                Debug.Log("Interact");
+
+                if (currentTextBox != null)
+                {
+                    if (!currentTextBox.activeInHierarchy)
+                    {
+                        EnableTextBox();
+                    }
+                    else
+                    {
+                        DisableTextBox();
+                    }
+                }
             }
+            
         }
         else
-        {
+        {   
+            if (currentTextBox != null)
+            {
+                if (currentTextBox.activeInHierarchy)
+                {
+                    DisableTextBox();
+                }
+            }
             DisableBackLightAndName();
         }
     }
@@ -56,10 +76,9 @@ public class Interactor : MonoBehaviour
                if (currentInteractable != obj.gameObject)
                {
                    currentInteractable = obj.transform.parent.gameObject;
-                   //Debug.Log("currentInteractable: " + currentInteractable.name);
                    currentBackLight = currentInteractable.transform.Find("BackLight")?.gameObject;
-                   //Debug.Log("currentBackLight: " + currentBackLight.name);
                    currentName = currentInteractable.transform.Find("Name").gameObject;
+                   currentTextBox = currentInteractable.transform.Find("TextBox").gameObject;
                }  
             }
 
@@ -101,7 +120,21 @@ public class Interactor : MonoBehaviour
         currentName = null;
     }
 
-   
+    void EnableTextBox()
+    {
+        if (currentTextBox != null && !currentTextBox.activeSelf)
+        {
+            currentTextBox.SetActive(true);
+        }
+    }
+    
+    void DisableTextBox()
+    {
+        if (currentTextBox != null)
+        {
+            currentTextBox.SetActive(false);
+        }
+    }
     
     
 }
