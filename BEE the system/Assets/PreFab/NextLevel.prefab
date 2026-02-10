@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33471c05971d7e24ca72c1985188e7ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneName: BTS ART
 --- !u!61 &2933679661780967874
 BoxCollider2D:
   m_ObjectHideFlags: 0

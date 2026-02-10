@@ -6,11 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/BTS ART.unity
+    guid: 5ab9d18b9e4bf7d4d8d959a11b3a99bc
+  - enabled: 1
     path: Assets/Scenes/Hallway BTS ART.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/BTS ART.unity
-    guid: 5ab9d18b9e4bf7d4d8d959a11b3a99bc
+    path: Assets/Scenes/Hallway BTS COMMERCE.unity
+    guid: 6b6a3e4c87ae061459306e11edbf3d34
+  - enabled: 1
+    path: Assets/Scenes/Hallway BTS CRAFTS.unity
+    guid: 12a1884bc03c838479c6a7096ebdf780
+  - enabled: 1
+    path: Assets/Scenes/Hallway BTS INDUSTRY.unity
+    guid: 336c033c55195b741b176762bb258c34
+  - enabled: 1
+    path: Assets/Scenes/Hallway BTS SANTE.unity
+    guid: 1c98bb2d9967ae646a8ab9109ee7ec81
+  - enabled: 1
+    path: Assets/Scenes/Hallway BTS SERVICE.unity
+    guid: cd5ee17553e5abc42aba1c3fd898d8f6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

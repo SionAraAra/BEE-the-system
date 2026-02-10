@@ -400,7 +400,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3879320175252713702, guid: 62e85bc8f53ead547914d197330501e6, type: 3}
       propertyPath: SceneName
-      value: Hallway BTS SERVICE
+      value: Hallway BTS INDUSTRY
       objectReference: {fileID: 0}
     - target: {fileID: 3911423799797569175, guid: 62e85bc8f53ead547914d197330501e6, type: 3}
       propertyPath: m_Name
@@ -469,7 +469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3879320175252713702, guid: 62e85bc8f53ead547914d197330501e6, type: 3}
       propertyPath: SceneName
-      value: Hallway BTS COMMERCE
+      value: Hallway BTS SERVICE
       objectReference: {fileID: 0}
     - target: {fileID: 3911423799797569175, guid: 62e85bc8f53ead547914d197330501e6, type: 3}
       propertyPath: m_Name
