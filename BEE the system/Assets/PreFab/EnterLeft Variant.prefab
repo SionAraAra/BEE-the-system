@@ -60,6 +60,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1923990446143916310, guid: 62e85bc8f53ead547914d197330501e6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5948408
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923990446143916310, guid: 62e85bc8f53ead547914d197330501e6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5276018
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923990446143916310, guid: 62e85bc8f53ead547914d197330501e6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.012495
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923990446143916310, guid: 62e85bc8f53ead547914d197330501e6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.066263
+      objectReference: {fileID: 0}
     - target: {fileID: 3879320175252713702, guid: 62e85bc8f53ead547914d197330501e6, type: 3}
       propertyPath: SceneName
       value: Hallway BTS SERVICE
@@ -67,6 +83,14 @@ PrefabInstance:
     - target: {fileID: 3911423799797569175, guid: 62e85bc8f53ead547914d197330501e6, type: 3}
       propertyPath: m_Name
       value: EnterLeft Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4042628645549904652, guid: 62e85bc8f53ead547914d197330501e6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3436773
+      objectReference: {fileID: 0}
+    - target: {fileID: 4042628645549904652, guid: 62e85bc8f53ead547914d197330501e6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.578
       objectReference: {fileID: 0}
     - target: {fileID: 4976161884303087826, guid: 62e85bc8f53ead547914d197330501e6, type: 3}
       propertyPath: m_IsActive
