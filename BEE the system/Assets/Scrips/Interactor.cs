@@ -13,6 +13,7 @@ public class Interactor : MonoBehaviour
     private GameObject currentBackLight;
     private GameObject currentName;
     private GameObject currentTextBox;
+    private GameObject currentHint;
     private bool getText = false;
     
     // Update is called once per frame
@@ -20,8 +21,19 @@ public class Interactor : MonoBehaviour
     {
         if (DetectObject())
         {
-            EnableBackLightAndName();
-
+            if (currentTextBox != null)
+            {
+                if (currentTextBox.activeInHierarchy)
+                {
+                    DisableName();
+                }
+                else
+                {
+                    EnableName();
+                }
+            }
+            EnableBackLight();    
+            EnableHint();
             if (InteractInput())
             {
                 if (currentInteractable.CompareTag("NextLevel"))
@@ -54,9 +66,13 @@ public class Interactor : MonoBehaviour
                     DisableTextBox();
                 }
             }
-            DisableBackLightAndName();
+            DisableBackLight();
+            DisableName();
+            DisableHint();
         }
     }
+
+    
 
 
     bool InteractInput()
@@ -79,6 +95,7 @@ public class Interactor : MonoBehaviour
                    currentBackLight = currentInteractable.transform.Find("BackLight")?.gameObject;
                    currentName = currentInteractable.transform.Find("Name").gameObject;
                    currentTextBox = currentInteractable.transform.Find("TextBox").gameObject;
+                   currentHint  = currentInteractable.transform.Find("Hint").gameObject;
                }  
             }
 
@@ -88,6 +105,7 @@ public class Interactor : MonoBehaviour
                 
                 currentInteractable = obj.transform.gameObject;
                 currentBackLight = currentInteractable.transform.Find("BackLight")?.gameObject;
+                currentHint = currentInteractable.transform.Find("Hint").gameObject;
             }
            
             
@@ -101,23 +119,53 @@ public class Interactor : MonoBehaviour
         
         
     }
-    void EnableBackLightAndName()
+    void EnableBackLight()
     {
         if (currentBackLight != null && !currentBackLight.activeSelf)
             currentBackLight.SetActive(true);
-        if (currentName != null && !currentName.activeSelf)
-            currentName.SetActive(true);
+        
     }
 
-    void DisableBackLightAndName()
+    void DisableBackLight()
     {
         if (currentBackLight != null)
             currentBackLight.SetActive(false);
-        if (currentName != null)
-            currentName.SetActive(false);
+        
         currentInteractable = null;
         currentBackLight = null;
+        
+    }
+
+    void EnableName()
+    {
+        if (currentName != null && !currentName.activeSelf)
+        {
+            currentName.SetActive(true);
+        }
+    }
+    
+    void DisableName()
+    {
+        if (currentName != null){
+            currentName.SetActive(false);
+            
+        }
         currentName = null;
+    }
+    void EnableHint()
+    {
+        if (currentHint != null && !currentHint.activeSelf)
+        {
+            currentHint.SetActive(true);
+        }
+    }
+    
+    private void DisableHint()
+    {
+        if (currentHint != null)
+        {
+            currentHint.SetActive(false);
+        }
     }
 
     void EnableTextBox()
