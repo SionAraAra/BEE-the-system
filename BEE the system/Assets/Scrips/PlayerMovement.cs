@@ -15,14 +15,8 @@ public class PlayerMovement : MonoBehaviour
     
     private float xInput;
 
-    
-    //private Animator animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        /*animator = GetComponentInChildren<Animator>();
-        animator.SetBool("WakeUp", true);*/
-    }
+
 
     void Awake()
     {
@@ -58,6 +52,10 @@ public class PlayerMovement : MonoBehaviour
                 baseScale.y,
                 baseScale.z
             );
+        }else if (xInput == 0)
+        {
+            body.linearVelocityX = 0;
+            body.linearVelocityY = 0;
         }
     }
     
