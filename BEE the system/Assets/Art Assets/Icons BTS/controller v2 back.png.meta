@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3da3677cc04458743b563a6472e1a6e4
+guid: e969bbe5af43a7c468cd5319e26324d9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7374010266558846418
-    second: icon anim v2 white_0
+      213: 1968804648618899667
+    second: controller v2 back_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: icon anim v2 white_0
+      name: controller v2 back_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 118
-        width: 488
-        height: 355
+        x: 3
+        y: 58
+        width: 501
+        height: 341
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e2a2da35bb04aa990800000000000000
-      internalID: -7374010266558846418
+      spriteID: 3d831119569925b10800000000000000
+      internalID: 1968804648618899667
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      icon anim v2 white_0: -7374010266558846418
+      controller v2 back_0: 1968804648618899667
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

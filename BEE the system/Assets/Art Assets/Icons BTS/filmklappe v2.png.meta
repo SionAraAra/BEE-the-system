@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3da3677cc04458743b563a6472e1a6e4
+guid: b344b9e39bf34114287ab7e40f6f9f91
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7374010266558846418
-    second: icon anim v2 white_0
+      213: 4431529691179819560
+    second: filmklappe v2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: icon anim v2 white_0
+      name: filmklappe v2_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 118
-        width: 488
-        height: 355
+        x: 24
+        y: 23
+        width: 455
+        height: 475
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e2a2da35bb04aa990800000000000000
-      internalID: -7374010266558846418
+      spriteID: 822ae5e56c4ff7d30800000000000000
+      internalID: 4431529691179819560
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      icon anim v2 white_0: -7374010266558846418
+      filmklappe v2_0: 4431529691179819560
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
